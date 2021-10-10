@@ -13,6 +13,7 @@ This app has scraped data form the web with Go (Golang) to provide a data set of
 - JavaScript
     - Node.js
     - React.js
+        - React HashRouter
     - DOM
     - Local Storage
 - Go (Golang)
@@ -20,14 +21,12 @@ This app has scraped data form the web with Go (Golang) to provide a data set of
     - Go Benchmarking
     - Go Web Scraping
 - HTML/CSS
-- Bootstraps
+- Bootstraps **V5.1**
+    - Bootstrap CSS/JS
     - Bootstrap iCons
 - [Figma](https://www.figma.com/file/zqA6nNoXnQQhxqIRP4SwAn/Vegan?node-id=3%3A3)
 - Google Fonts
-
-
-
-
+    - Google Font, "Risque"
 - ***GitHub Pages not active for this version***
 <!-- - [GitHub Pages](https://lwrgithub.github.io/vegan-recipes-search-engine/) -->
 

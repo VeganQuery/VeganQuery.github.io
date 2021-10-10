@@ -1,0 +1,232 @@
+body {
+  font-family: Roboto, sans-serif;
+}
+
+#main-title{
+  font-family: 'Risque', cursive;
+}
+#seach-res-title{
+  font-family: 'Risque', cursive;
+}
+
+#res-left-title-div{
+  left: 1%;
+  z-index: 9999;
+  width: 50px;
+}
+
+/* -----Search----- */
+
+#search-div{
+  border-radius: 25px;
+  border: 1px solid #ced4da;
+  margin: auto;
+  padding-bottom: 0px;
+}
+
+#res-search-div{
+  border-radius: 25px;
+  border: 1px solid #ced4da;
+  margin: auto;
+  padding-bottom: 0px;
+}
+
+#main-search{
+  border-radius: 25px 0px 0px 25px;
+  border: none;
+  padding-top: 4px;
+  padding-left: 15px;
+  padding-right: 0px;
+  /* margin-left: .5px; */
+  margin-bottom: 0px;
+  /* margin-right: 8px; */
+  margin-bottom: 4px;
+  margin-top: 4px;
+  width: 86%;
+  border-right: 1px solid #ced4da;
+}
+#searched{
+  border-radius: 25px 0px 0px 25px;
+  border: none;
+  padding-top: 9px;
+  padding-left: 15px;
+  margin-bottom: 0px;
+}
+
+
+
+/* hr#vert {
+  transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  width: 10px;
+  position: relative;
+  top: 16px;
+} */
+
+
+/* -----/Search----- */
+
+header {
+  padding: 20px 0;
+}
+
+header .row,
+footer .row {
+  display: flex;
+  align-items: center;
+}
+
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-color: white;
+  color: #ffffff;
+  height: 400px;
+}
+
+.jumbotron h2 {
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+
+@media (max-width: 35em) {
+  .jumbotron h2 {
+      font-size: 55px;
+  }
+}
+
+.jumbotron h3 {
+  margin: 0 0 20px;
+  color: #fff;
+}
+/* /home */
+
+/* search res */
+/* #side-ad{
+  background-color: blue;
+  height: 100px;
+} */
+/* /search res */
+
+
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+/* -----------------  Experience Page Cards   ------------------ */
+
+@media (min-width: 1em) {
+  /* .card-columns {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+  } */
+  /*  title */
+  #main-title{
+    font-family: 'Risque', cursive;
+    font-size: 6.5em;
+  }
+  #search-div{
+    width: 100%;
+  }
+  #search-button{
+    border-radius: 0px 25px 25px 0px;
+    font-size: 20px;
+    border: none;
+    color: gray;
+    cursor: pointer;
+    padding-top: 3px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  #res-search-button{
+    border-radius: 0px 25px 25px 0px;
+    font-size: 20px;
+    border: none;
+    color: #0280C8;
+    cursor: pointer;
+    padding-top: 4px;
+    padding-left: 6px;
+    margin-right: 0px;
+  }
+}
+@media (min-width: 20em) {
+  #main-search{
+    width: 90%;
+  }
+}
+@media (min-width: 30em) {
+  #search-button{
+    padding-top: 2.5px;
+    padding-left: 10px;
+  }
+  #res-search-button{
+    padding-top: 2.5px;
+    padding-left: 10px;
+  }
+  #main-search{
+    width: 91%;
+  }
+}
+@media (min-width: 36em) {
+  /* .card-columns {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+  } */
+  #search-button{
+    padding-top: 2.5px;
+    padding-left: 18px;
+  }
+  #res-search-button{
+    padding-top: 2.5px;
+    padding-left: 10px;
+  }
+  
+} 
+@media (min-width: 48em) {
+  /*  title */
+  #main-title{
+    font-family: 'Risque', cursive;
+    font-size: 8em;
+  }
+  #search-div{
+    width: 35em;
+  }
+  #title-sec{
+    left: 10%
+  }
+  #adj-4-logo{
+    left: 10%;
+    width: 90%;
+    top: 65px;
+    margin-bottom: 120px;
+  }
+  #adj-hr{
+    left: -11%;
+    width: 111%;
+    top: 55px;
+  }
+} 
+
+/* s */
+.card-header{
+  background-color: rgba(0,0,0,.045);
+  font-size: 11px;
+  padding: 0;
+}
+/* -----------------  /Experience Page Cards   ------------------ */
+
+
+/* this was appied to fix footer because it had an odd right margin that would not go away */
+.container, .container-md, .container-sm {
+  max-width: 100%;
+}

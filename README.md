@@ -7,16 +7,21 @@ This app has scraped data form the web with Go (Golang) to provide a data set of
 
 
 ## Tech Used
+***MERN Stack + Go***
+
 
 - JavaScript
 - Node.js
 - React.js
 - Go (Golang)
 - HTML/CSS
-- Boostrap
+- Bootstraps
+- Bootstrap iCons
 - [Figma](https://www.figma.com/file/zqA6nNoXnQQhxqIRP4SwAn/Vegan?node-id=3%3A3)
 - Google Fonts
 - DOM
+- Local Storage
+
 
 - ***GitHub Pages not active for this version***
 <!-- - [GitHub Pages](https://lwrgithub.github.io/vegan-recipes-search-engine/) -->

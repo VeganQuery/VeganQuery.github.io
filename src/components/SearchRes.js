@@ -21,7 +21,7 @@ function SearchRes (props) {
                 return (
                     <div className="col">
                         {/* Link to recipe website */}
-                        <a className="card p-0 text-decoration-none" href={data['href']}>
+                        <a className="card h-100 p-0 text-decoration-none" href={data['href']}>
                             {/* Recipe image */}
                             <img className="card-img-top" src={data['img']} alt={data['title']}/>
                         
@@ -63,12 +63,12 @@ function SearchRes (props) {
 
             <section className="position-relative" id="adj-4-logo">
                 {/* Title & Search */}
-                <section className={window.innerWidth >= 768 ? "container text-center pb-2 fixed-top bg-white" : "container text-center pb-2"} id="title-sec">
+                <section className={window.innerWidth >= 768 ? "container text-center fixed-top bg-white" : "container text-center"} id="title-sec">
                     <div className="row">
                         <div className="col-12 col-md-8 col-lg-6 m-0 pt-2">
 
                             {/* Website Name in a heading tag */}
-                            <a href="/" className="text-decoration-none row d-block d-md-none">
+                            <a href="/" className="text-decoration-none row d-block d-md-none mt-1" id="mobi-logo">
                                 <h2 
                                     className="text-success" 
                                     id="seach-res-title" 
@@ -109,12 +109,12 @@ function SearchRes (props) {
 
                 <hr className="d-none d-md-block mt-0  fixed-top" id="adj-hr"/>
         
-                <section className="container">
-                    <div className="row">
+                <section className="container" >
+                    <div className="row" id="ad-search-res">
 
                         <div className="col-12 col-md-8 col-lg-6 m-0">
 
-                            <div className="m-1 mb-4" style={{border: "1px solid #ced4da", height: "60px"}}>
+                            <div className="" style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "85px"}} id="top-ad">
                                 Ad
                             </div>
 
@@ -122,13 +122,13 @@ function SearchRes (props) {
                                 {searchR()}
                             </div>
 
-                            <div className="m-1 mt-3" style={{border: "1px solid #ced4da", height: "60px"}}>
+                            <div className="" style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "112px"}} id="botom-ad">
                                 Ad
                             </div>
                         </div>
                         
                         <div className="col-12 col-md-4 col-lg-6 d-none d-md-block m-0" id="side-ad">
-                            <div className="mt-1" style={{border: "1px solid #ced4da", height: "600px", width: "50%"}}>
+                            <div className="" style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "600px", width: "50%"}}>
                                 Ad
                             </div>
                         </div>

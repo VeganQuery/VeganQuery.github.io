@@ -7,13 +7,18 @@ body {
 }
 #seach-res-title{
   font-family: 'Risque', cursive;
+  font-size: 24px;
+}
+
+#mobi-logo{
+  margin-bottom: 12.5px;
 }
 
 #res-left-title-div{
-  left: 1.3%;
+  left: 2%;
   z-index: 9999;
   width: 50px;
-  top: 3px;
+  top: 14px;
 }
 
 /* -----Search----- */
@@ -161,6 +166,15 @@ footer {
     padding-left: 6px;
     margin-right: 0px;
   }
+  #ad-search-res{
+    margin-top: 3.5px;
+  }
+  #top-ad{
+    margin-bottom: 35px;
+  }
+  #botom-ad{
+    margin-top: 35px;
+  }
 }
 @media (min-width: 20em) {
   #main-search{
@@ -220,10 +234,28 @@ footer {
     top: 65px;
     margin-bottom: 120px;
   }
+  #res-search-div{
+    margin-top: 7px;
+    width: 88.5%;
+    position: relative;
+    left: -5.5%;
+  }
+  #title-sec{
+    height: 70px;
+  }
   #adj-hr{
     left: -11%;
     width: 111%;
-    top: 55px;
+    top: 69px;
+  }
+  #ad-search-res{
+    margin-top: 40px;
+  }
+  #top-ad{
+    margin-bottom: 35px;
+  }
+  #botom-ad{
+    margin-top: 40px;
   }
 } 
 
@@ -234,6 +266,13 @@ footer {
   padding: 0;
 }
 /* -----------------  /Experience Page Cards   ------------------ */
+
+.card{
+  border-radius: 12.5px 12.5px 12.5px 12.5px;
+}
+.card-img-top{
+  border-radius: 12.5px 12.5px 0px 0px;
+}
 
 
 /* this was appied to fix footer because it had an odd right margin that would not go away */
@@ -257,3 +296,4 @@ footer {
   height: 3rem;           
 }
 /* -----/This Is Very Important it makes sure footer is at the bottom of the page----- */
+

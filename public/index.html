@@ -57,11 +57,24 @@
     -->
   </body>
   <script>
+    // if page is reloaded then the last search will be pulled form localStorage & put in the search box
     window.addEventListener('load', function() {
       let searched = document.getElementById("searched")
+      // makes sure that the search is in input fild if element exists
       if(searched != null){
         searched.value = localStorage.getItem('search')
       }
     })
+
+    // widow size changes Title & Search input aria on search res page
+    window.addEventListener('resize', function() {
+      let titleSearch = document.getElementById("title-sec")
+      let isOnPage = (searched != null ? true : false)
+      if(isOnPage && window.innerWidth >= 768){
+        titleSearch.setAttribute('class', "container text-center pb-2 fixed-top bg-white");
+      }else if(isOnPage && window.innerWidth <= 767){
+        titleSearch.setAttribute('class', "container text-center pb-2");
+      }
+    });
   </script>
 </html>

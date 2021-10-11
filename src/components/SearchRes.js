@@ -2,20 +2,14 @@ import React from 'react';
 import { datas } from '../data/datas';
 
 function SearchRes (props) {
+    
+    
 
-    // console.log(React.useState(""))
-    const [searchTerm, setSearchTerm] = React.useState("");
-    // let userSearch = props.history.location.state
-    // console.log("Props: ",props)
-    // console.log("Data: ",props.history.location.state)
-    // document.getElementById("main-search").value = localStorage.getItem('search')
+    // This alows the the users search to be displayed in the input box when they move from the Home page to the search res page
+    let [searchTerm, setSearchTerm] = React.useState(`${localStorage.getItem('search')}`);
 
+    // this has to be done so that if page is refreshed the items that match the search will still be displayed
     props.history.location.state = localStorage.getItem('search')
-
-    // console.log(localStorage.getItem('search'))
-
-    // console.log("Props: ",props)
-    // console.log("Data: ",props.history.location.state)
 
     const searchR = () => {
 
@@ -25,7 +19,7 @@ function SearchRes (props) {
             if(data['title'].toLowerCase().includes(props.history.location.state)){
 
                 return (
-                    <div class="col">
+                    <div className="col">
                         {/* Link to recipe website */}
                         <a className="card p-0 text-decoration-none" href={data['href']}>
                             {/* Recipe image */}
@@ -45,13 +39,13 @@ function SearchRes (props) {
     // Assigns input value to props.history.location.state
     const handleInputChange = (e) => {
         setSearchTerm(e.target.value);
-        props.history.location.state = e.target.value
     }
 
     const sendSearch = () => {
-        localStorage.setItem('search', props.history.location.state); // Stores the search query from props.history.location.state in local storage
+        console.log("sendSearch",searchTerm)
+        localStorage.setItem('search', searchTerm); // Stores the search query in local storage
         props.history.push({
-            state: props.history.location.state,
+            state: searchTerm,
             pathname: '/searchRes'
         }) // Assigns what the user searches to props.history.location.state & moves us to the search results page
     }
@@ -68,10 +62,18 @@ function SearchRes (props) {
             </a>
 
             <section className="position-relative" id="adj-4-logo">
-                {/* Title & Search bar */}
-                <section className="container text-center pb-2 d-none d-md-block fixed-top bg-white" id="title-sec">
+                {/* Title & Search */}
+                <section className="container text-center pb-2 fixed-top bg-white" id="title-sec">
                     <div className="row">
                         <div className="col-12 col-md-8 col-lg-6 m-0 pt-2">
+
+                            {/* Website Name in a heading tag */}
+                            <a href="/" className="text-decoration-none row d-block d-md-none">
+                                <h2 
+                                    className="text-success" 
+                                    id="seach-res-title" 
+                                >Vegan</h2>
+                            </a>
 
                             {/* Search bar */}
                             <form className="row" onSubmit={sendSearch} id="res-search-div">
@@ -82,7 +84,8 @@ function SearchRes (props) {
                                     type="search" 
                                     placeholder="Search" 
                                     aria-label="Search" 
-                                    id="main-search"
+                                    id="searched"
+                                    value={searchTerm}
                                     onChange={handleInputChange}
                                 /> 
 
@@ -104,44 +107,6 @@ function SearchRes (props) {
                     </div>
                 </section>
 
-                {/* Title & Search bar */}
-                <section className="container text-center pb-2 d-block d-md-none" id="title-sec">
-                    <div className="row">
-                        <div className="col-12 col-md-8 col-lg-6 m-0 pt-2">
-
-                            {/* Website Name in a heading tag */}
-                            <a href="/" className="text-decoration-none row">
-                                <h2 
-                                    className="text-success" 
-                                    id="seach-res-title" 
-                                >Vegan</h2>
-                            </a>
-
-                            
-
-                            {/* Search bar */}
-                            <form className="row" onSubmit={sendSearch} id="res-search-div">
-
-                                {/* Input for search */}
-                                <input 
-                                    className="col-11" 
-                                    type="search" 
-                                    placeholder="Search" 
-                                    aria-label="Search" 
-                                    id="main-search"
-                                    onChange={handleInputChange}
-                                /> 
-
-                                {/* <hr className="col-1 m-0 d-none d-sm-block" id="vert"/> */}
-                                {/* Search button; it's a search icon, form bootstrap icons */}
-                                <span className="col-1" id="res-search-button" onClick={sendSearch}><i className="bi bi-search"></i></span>
-
-                            </form>
-                        </div>
-
-                    </div>
-                </section>
-
                 <hr className="d-none d-md-block mt-0  fixed-top" id="adj-hr"/>
         
                 <section className="container">
@@ -152,10 +117,6 @@ function SearchRes (props) {
                             <div className="m-1 mb-4" style={{border: "1px solid #ced4da", height: "60px"}}>
                                 Ad
                             </div>
-
-                            {/* <div className="card-columns">
-                                {searchR()}
-                            </div> */}
 
                             <div className="row row-cols-2 row-cols-md-3 g-4">
                                 {searchR()}

@@ -1,6 +1,6 @@
 # Vegan Recipe Search Engine
 
-This app has scraped data form the web with Go (Golang) to provide a data set of Vegan Recipes. The Website of this app is made with React.js & provides a vegan recipe search engin. I hope you link it!
+This app has scraped data form the web with Go (Golang) to provide a data set of vegan recipes. This web app is made with React.js & provides a vegan recipe search engin. The site is build with the MERN stack pluss Go (Golang). I built the wire frames using [Figma.com](https://www.figma.com/file/zqA6nNoXnQQhxqIRP4SwAn/Vegan?node-id=3%3A3), I hope you like my web app!
 
 ***GitHub Pages not active for this version***
 <!-- [Visit Site](https://lwrgithub.github.io/vegan-recipes-search-engine/) -->

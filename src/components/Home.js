@@ -7,6 +7,7 @@ function Home (props) {
     // Assigns input value to the variable searchQuery
     const handleInputChange = (e) => {
         searchQuery = e.target.value
+        console.log(e.target.value)
     }
 
     // Executes when the search button is pressed

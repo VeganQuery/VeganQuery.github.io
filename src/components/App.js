@@ -14,12 +14,15 @@ import SearchRes from './SearchRes';
 
 const App = () => (
   <HashRouter>
+    {/* div content-wrap is here so the footer is at the bottom of the page */}
+    <div id="content-wrap">
       <Switch>
         <Route path="/home" component={Home} />
         <Route path="/searchRes" component={SearchRes} />
         <Route component={Home} />
       </Switch>
-      <Footer />
+    </div>
+    <Footer />
   </HashRouter>
 )
 

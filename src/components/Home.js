@@ -46,7 +46,7 @@ function Home (props) {
                         /> 
 
                         {/* Search button; it's a search icon, form bootstrap icons */}
-                        <span className="col-1 p-0 pt-1" id="search-button" onClick={sendSearch}><i className="bi bi-search"></i></span>
+                        <span className="col-1 pt-1" id="search-button" onClick={sendSearch}><i className="bi bi-search"></i></span>
 
                     </form>
 

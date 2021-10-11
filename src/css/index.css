@@ -10,9 +10,10 @@ body {
 }
 
 #res-left-title-div{
-  left: 1%;
+  left: 1.3%;
   z-index: 9999;
   width: 50px;
+  top: 3px;
 }
 
 /* -----Search----- */
@@ -134,7 +135,7 @@ footer {
   /*  title */
   #main-title{
     font-family: 'Risque', cursive;
-    font-size: 6.5em;
+    font-size: 6em;
   }
   #search-div{
     width: 100%;
@@ -146,7 +147,7 @@ footer {
     color: gray;
     cursor: pointer;
     padding-top: 3px;
-    padding-left: 0px;
+    padding-left: 6px;
     margin-bottom: 0px;
     margin-right: 0px;
   }
@@ -172,7 +173,7 @@ footer {
 @media (min-width: 30em) {
   #search-button{
     padding-top: 2.5px;
-    padding-left: 10px;
+    /* padding-left: 7px; */
   }
   #res-search-button{
     padding-top: 2.5px;
@@ -193,7 +194,7 @@ footer {
   } */
   #search-button{
     padding-top: 2.5px;
-    padding-left: 18px;
+    padding-left: 9px;
   }
   #res-search-button{
     padding-top: 2.5px;
@@ -239,3 +240,20 @@ footer {
 .container, .container-md, .container-sm {
   max-width: 100%;
 }
+
+/* footer */
+/* -----This Is Very Important it makes sure footer is at the bottom of the page----- */
+body {
+  position: relative;
+  min-height: 100vh;
+}
+#content-wrap {
+  padding-bottom: 4rem;   
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;           
+}
+/* -----/This Is Very Important it makes sure footer is at the bottom of the page----- */

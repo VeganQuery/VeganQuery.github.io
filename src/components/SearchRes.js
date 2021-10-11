@@ -3,7 +3,7 @@ import { datas } from '../data/datas';
 
 function SearchRes (props) {
     
-    
+    // let isInData = false
 
     // This alows the the users search to be displayed in the input box when they move from the Home page to the search res page
     let [searchTerm, setSearchTerm] = React.useState(`${localStorage.getItem('search')}`);
@@ -17,7 +17,7 @@ function SearchRes (props) {
         return datas.map(data => {
 
             if(data['title'].toLowerCase().includes(props.history.location.state)){
-
+                // isInData = true
                 return (
                     <div className="col">
                         {/* Link to recipe website */}
@@ -63,7 +63,7 @@ function SearchRes (props) {
 
             <section className="position-relative" id="adj-4-logo">
                 {/* Title & Search */}
-                <section className="container text-center pb-2 fixed-top bg-white" id="title-sec">
+                <section className={window.innerWidth >= 768 ? "container text-center pb-2 fixed-top bg-white" : "container text-center pb-2"} id="title-sec">
                     <div className="row">
                         <div className="col-12 col-md-8 col-lg-6 m-0 pt-2">
 

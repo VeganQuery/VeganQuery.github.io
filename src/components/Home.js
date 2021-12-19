@@ -1,4 +1,5 @@
 import React from 'react';
+import { datas } from '../data/datas';
 
 function Home (props) {
 
@@ -7,7 +8,6 @@ function Home (props) {
     // Assigns input value to the variable searchQuery
     const handleInputChange = (e) => {
         searchQuery = e.target.value
-        console.log(e.target.value)
     }
 
     // Executes when the search button is pressed
@@ -17,6 +17,37 @@ function Home (props) {
             state: searchQuery,
             pathname: '/searchRes'
         }) // Assigns what the user searches to props.history.location.state & moves us to the search results page
+    }
+
+    const searchR = () => {
+
+        let dataLen = datas.length
+        let topCardsSet = new Set()
+        while(topCardsSet.size < 3){
+            topCardsSet.add(datas[Math.floor(Math.random() * dataLen)])
+        }
+
+        let topCardsArr = Array.from(topCardsSet)
+
+        // gets search resalts & puts them into bootstrap cards
+        return topCardsArr.map((data) => {
+            
+            return (
+                <div className="col">
+                    {/* Link to recipe website */}
+                    <a className="card h-100 p-0 text-decoration-none" href={data['href']}>
+                        {/* Recipe image */}
+                        <img className="card-img-top" src={data['img']} alt={data['title']} style={{height: "150px", objectFit: "cover"}}/>
+                    
+                        <div className="card-body">
+                            {/* Title of the recipe */}
+                            <h5 className="card-title" style={{color:'black'}}>{data['title']}</h5>
+                        </div>
+                    </a>
+                </div>
+            )
+            
+        });
     }
 
     return (
@@ -52,6 +83,12 @@ function Home (props) {
 
                 </div>
             </section>
+            <section>
+                <div className="row row-cols-1 row-cols-md-3 g-4 mx-auto" id="home-pg-cards">
+                    {searchR()}
+                </div>
+            </section>
+
         </div>
     );
 }

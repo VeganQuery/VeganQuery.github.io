@@ -23,7 +23,7 @@ function SearchRes (props) {
                         {/* Link to recipe website */}
                         <a className="card h-100 p-0 text-decoration-none" href={data['href']}>
                             {/* Recipe image */}
-                            <img className="card-img-top" src={data['img']} alt={data['title']}/>
+                            <img className="card-img-top" src={data['img']} alt={data['title']} style={{height: "150px", objectFit: "cover"}}/>
                         
                             <div className="card-body">
                                 {/* Title of the recipe */}

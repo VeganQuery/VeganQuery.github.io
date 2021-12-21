@@ -131,7 +131,28 @@ footer {
   padding: 20px 0;
 }
 
-/* -----------------  Experience Page Cards   ------------------ */
+/* search item nav at bottom */
+li {
+  display: inline;
+  
+}
+li span {
+  /* font-family: 'Roboto', sans-serif; */
+  margin: 10px 0px 10px 0px;
+  font-size: 21px;
+  color: #0280C8;
+  padding: 4px 10px 4px 10px;
+  display: inline;
+  text-decoration: none;
+  background-color: #F1F5F6;
+}
+.pg-nav-active:hover{
+  color: #03659e;
+  cursor: pointer;
+}
+/* /search item nav at bottom */
+
+/* -----------------  Page Cards   ------------------ */
 
 @media (min-width: 1em) {
   /* .card-columns {
@@ -275,7 +296,7 @@ footer {
   font-size: 11px;
   padding: 0;
 }
-/* -----------------  /Experience Page Cards   ------------------ */
+/* -----------------  /Page Cards   ------------------ */
 
 .card{
   border-radius: 12.5px 12.5px 12.5px 12.5px;

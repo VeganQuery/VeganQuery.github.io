@@ -2,22 +2,26 @@ import React from 'react';
 import { datas } from '../data/datas';
 
 function SearchRes (props) {
-    
-    // let isInData = false
 
     // This alows the the users search to be displayed in the input box when they move from the Home page to the search res page
     let [searchTerm, setSearchTerm] = React.useState(`${localStorage.getItem('search')}`);
 
     // this has to be done so that if page is refreshed the items that match the search will still be displayed
-    props.history.location.state = localStorage.getItem('search')
+    props.history.location.state = [localStorage.getItem('search'), parseInt(localStorage.getItem('pgNum'))]
+
+    let pgNum = props.history.location.state[1]
+
+    let pgData = datas.filter(data => {
+        return data['title'].toLowerCase().includes(props.history.location.state[0])
+    });
 
     const searchR = () => {
 
-        // gets search resalts & puts them into bootstrap cards
-        return datas.map(data => {
+        let endToEnd = pgNum * 24
 
-            if(data['title'].toLowerCase().includes(props.history.location.state)){
-                // isInData = true
+        if(pgData.length < 25){
+            
+            return pgData.map(data => {
                 return (
                     <div className="col">
                         {/* Link to recipe website */}
@@ -32,8 +36,152 @@ function SearchRes (props) {
                         </a>
                     </div>
                 )
-            }
-        });
+            });
+
+        } else {
+
+            // slice arry & .map() through the slice  
+            const slcPgData = pgData.slice(endToEnd-24, endToEnd)
+
+            return slcPgData.map(data => {
+                return (
+                    <div className="col">
+                        {/* Link to recipe website */}
+                        <a className="card h-100 p-0 text-decoration-none" href={data['href']}>
+                            {/* Recipe image */}
+                            <img className="card-img-top" src={data['img']} alt={data['title']} style={{height: "150px", objectFit: "cover"}}/>
+                        
+                            <div className="card-body">
+                                {/* Title of the recipe */}
+                                <h5 className="card-title" style={{color:'black'}}>{data['title']}</h5>
+                            </div>
+                        </a>
+                    </div>
+                )
+            });
+        }
+    }
+
+    // Var's below keep track of the page number 
+    let gpNav1Var;
+    let gpNav2Var;
+    let gpNav3Var;
+    let gpNav4Var;
+
+    // Moves to the page that the user requested
+    const changePage = (pgNum) =>{
+
+        // add page number to localstorage
+        localStorage.setItem('pgNum', pgNum);
+        // refresh the page
+        props.history.push({
+            state: [searchTerm, pgNum],
+            pathname: '/searchRes'
+        })
+
+    }
+
+    const gpNavLeft = () => {
+
+        if(pgNum > 1){
+            changePage(pgNum - 1)
+        }
+    }
+
+    const gpNav1 = () => {
+
+        // Scroll to the top of the page so user doesn't get confused
+        window.scrollTo(0,0);
+
+        changePage(gpNav1Var)
+
+    }
+    const gpNav2 = () => {
+
+        // Scroll to the top of the page so user doesn't get confused
+        window.scrollTo(0,0);
+
+        changePage(gpNav2Var)
+    }
+    const gpNav3 = () => {
+
+        // Scroll to the top of the page so user doesn't get confused
+        window.scrollTo(0,0);
+
+        changePage(gpNav3Var)
+    }
+    const gpNav4 = () => {
+
+        // Scroll to the top of the page so user doesn't get confused
+        window.scrollTo(0,0);
+
+        changePage(gpNav4Var)
+    }
+    const gpNavRight = () => {
+
+        if(pgNum < pgData.length/24){
+
+            // Scroll to the top of the page so user doesn't get confused
+            window.scrollTo(0,0);
+
+            changePage(pgNum + 1)
+        }
+    }
+
+    // builds the search res nav at the bottom 
+    const pgNav = () => {
+
+        if(pgData.length > 94){ //pgData.length > 119
+
+            gpNav1Var = 1
+            gpNav2Var = 2
+            gpNav3Var = 3
+            gpNav4Var = Math.ceil(pgData.length/24)
+        
+        } else if(pgData.length > 24){ //pgData.length > 24
+
+            gpNav1Var = 1
+            gpNav2Var = 2
+            gpNav3Var = false
+            gpNav4Var = Math.ceil(pgData.length/24)
+        
+        } else { //all else
+
+            gpNav1Var = 1
+            gpNav2Var = false
+            gpNav3Var = false
+            gpNav4Var = false
+        
+            
+        }
+
+
+        return (
+            <ul className="mx-auto text-center text mt-3">
+
+                {/* Left arrow to previous page */}
+                <li>
+                    <span className="rounded-circle mx-2 pg-nav-active"  onClick={gpNavLeft}>&lt;</span>
+                </li>
+                <li>
+                    <span id="pg-nav-1" className="pg-nav-active" style={{borderRadius: "5px 0px 0px 5px"}} onClick={gpNav1}>{gpNav1Var}</span>
+                </li>
+
+                {/* Depending on how many search results we find the navigation at the bottom of the page the chain */}
+                {/* These shows this page in bottom nav if gpNav2Var, gpNav3Var, gpNav4Var is true */}
+                {gpNav2Var ? <li><span id="pg-nav-2" className="pg-nav-active" onClick={gpNav2}>{gpNav2Var}</span></li> : ""}
+
+                {gpNav3Var ? <li><span id="pg-nav-3" className="pg-nav-active" onClick={gpNav3}>{gpNav3Var}</span></li> : ""}
+
+                {gpNav3Var && gpNav4Var !== 4 ? <li><span>...</span></li> : ""}
+                {gpNav4Var && gpNav4Var !== gpNav2Var && gpNav4Var !== gpNav3Var ? <li><span id="pg-nav-4" className="pg-nav-active" style={{borderRadius: "0px 5px 5px 0px"}} onClick={gpNav4}>{gpNav4Var}</span></li> : ""}
+
+                {/* Right arrow to next page */}
+                <li>
+                    <span className="rounded-circle mx-2 pg-nav-active" onClick={gpNavRight}>&gt;</span>
+                </li>
+            </ul>
+        )
     }
 
     // Assigns input value to props.history.location.state
@@ -42,10 +190,11 @@ function SearchRes (props) {
     }
 
     const sendSearch = () => {
-        console.log("sendSearch",searchTerm)
+       
         localStorage.setItem('search', searchTerm); // Stores the search query in local storage
+        localStorage.setItem('pgNum', 1)
         props.history.push({
-            state: searchTerm,
+            state: [searchTerm, 1],
             pathname: '/searchRes'
         }) // Assigns what the user searches to props.history.location.state & moves us to the search results page
     }
@@ -118,6 +267,7 @@ function SearchRes (props) {
                                 Ad
                             </div>
 
+                            {/* Search res */}
                             <div className="row row-cols-2 row-cols-md-3 g-4">
                                 {searchR()}
                             </div>
@@ -125,6 +275,35 @@ function SearchRes (props) {
                             <div className="" style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "112px"}} id="botom-ad">
                                 Ad
                             </div>
+
+
+                            {/* change page to view other search items */}
+                            {/* <ul className="mx-auto text-center text mt-3">
+                                <li>
+                                    <span className="rounded-circle mx-2 pg-nav-active"  onClick={gpNavLeft}>&lt;</span>
+                                </li>
+                                <li>
+                                    <span id="pg-nav-1" className="pg-nav-active" style={{borderRadius: "5px 0px 0px 5px"}} onClick={gpNav1}>1</span>
+                                </li>
+                                <li>
+                                    <span id="pg-nav-2" className="pg-nav-active" onClick={gpNav2}>2</span>
+                                </li>
+                                <li>
+                                    <span id="pg-nav-3" className="pg-nav-active" onClick={gpNav3}>3</span>
+                                </li>
+                                <li>
+                                    <span>...</span>
+                                </li>
+                                <li>
+                                    <span id="pg-nav-4" className="pg-nav-active" style={{borderRadius: "0px 5px 5px 0px"}} onClick={gpNav4}>25</span>
+                                </li>
+                                <li>
+                                    <span className="rounded-circle mx-2 pg-nav-active" onClick={gpNavRight}>&gt;</span>
+                                </li>
+                            </ul> */}
+                            {pgNav()}
+                            
+
                         </div>
                         
                         <div className="col-12 col-md-4 col-lg-6 d-none d-md-block m-0" id="side-ad">

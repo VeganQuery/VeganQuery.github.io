@@ -258,11 +258,13 @@ function SearchRes (props) {
 
                 <hr className="d-none d-md-block mt-0  fixed-top" id="adj-hr"/>
         
+                {/* Main content "Search Results" + Bottom Nav */}
                 <section className="container" >
                     <div className="row" id="ad-search-res">
 
                         <div className="col-12 col-md-8 col-lg-6 m-0">
 
+                            {/* Top Ad */}
                             <div className="" style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "85px"}} id="top-ad">
                                 Ad
                             </div>
@@ -272,40 +274,17 @@ function SearchRes (props) {
                                 {searchR()}
                             </div>
 
+                            {/* Bottom Ad */}
                             <div className="" style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "112px"}} id="botom-ad">
                                 Ad
                             </div>
 
-
-                            {/* change page to view other search items */}
-                            {/* <ul className="mx-auto text-center text mt-3">
-                                <li>
-                                    <span className="rounded-circle mx-2 pg-nav-active"  onClick={gpNavLeft}>&lt;</span>
-                                </li>
-                                <li>
-                                    <span id="pg-nav-1" className="pg-nav-active" style={{borderRadius: "5px 0px 0px 5px"}} onClick={gpNav1}>1</span>
-                                </li>
-                                <li>
-                                    <span id="pg-nav-2" className="pg-nav-active" onClick={gpNav2}>2</span>
-                                </li>
-                                <li>
-                                    <span id="pg-nav-3" className="pg-nav-active" onClick={gpNav3}>3</span>
-                                </li>
-                                <li>
-                                    <span>...</span>
-                                </li>
-                                <li>
-                                    <span id="pg-nav-4" className="pg-nav-active" style={{borderRadius: "0px 5px 5px 0px"}} onClick={gpNav4}>25</span>
-                                </li>
-                                <li>
-                                    <span className="rounded-circle mx-2 pg-nav-active" onClick={gpNavRight}>&gt;</span>
-                                </li>
-                            </ul> */}
+                            {/* Bottom Nav, change page to view other searched items */}
                             {pgNav()}
-                            
 
                         </div>
                         
+                        {/* Side Ad */}
                         <div className="col-12 col-md-4 col-lg-6 d-none d-md-block m-0" id="side-ad">
                             <div className="" style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "600px", width: "50%"}}>
                                 Ad
@@ -313,10 +292,8 @@ function SearchRes (props) {
                         </div>
 
                     </div>
-                    
                 </section>
             </section>
-            
         </div>
     );
 }

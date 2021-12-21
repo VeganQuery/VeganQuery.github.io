@@ -76,3 +76,8 @@ git push
 ***Search***
 
 <img alt="Screenshot of the search results when searching for a vegan recipe on the website." src="https://github.com/LWRGitHub/vegan/blob/main/public/img/vegan-search-res.png?raw=true" />
+
+
+***Search Footer***
+
+<img alt="Screenshot of the footer of the search results, shows of the page navigation." src="https://github.com/LWRGitHub/vegan/blob/main/public/img/vegan-footer.png?raw=true" />

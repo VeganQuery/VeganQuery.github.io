@@ -83,43 +83,58 @@ function SearchRes (props) {
 
     const gpNavLeft = () => {
 
-        if(pgNum > 1){
+        if(pgNum > 1){ // doesn't let it work on 1st page
             changePage(pgNum - 1)
         }
     }
 
     const gpNav1 = () => {
 
-        // Scroll to the top of the page so user doesn't get confused
-        window.scrollTo(0,0);
+        
 
-        changePage(gpNav1Var)
+        console.log(typeof pgNum, typeof gpNav1Var)
+        if(pgNum !== gpNav1Var){ // doesn't let it work if you are on that page already
+
+            // Scroll to the top of the page so user doesn't get confused
+            window.scrollTo(0,0);
+            
+            changePage(gpNav1Var)
+        }
 
     }
-    const gpNav2 = () => {
+    const gpNav2 = () => {        
 
-        // Scroll to the top of the page so user doesn't get confused
-        window.scrollTo(0,0);
+        if(pgNum !== gpNav2Var){ // doesn't let it work if you are on that page already
 
-        changePage(gpNav2Var)
+            // Scroll to the top of the page so user doesn't get confused
+            window.scrollTo(0,0);
+
+            changePage(gpNav2Var)
+        }
     }
     const gpNav3 = () => {
 
-        // Scroll to the top of the page so user doesn't get confused
-        window.scrollTo(0,0);
+        if(pgNum !== gpNav3Var){ // doesn't let it work if you are on that page already
 
-        changePage(gpNav3Var)
+            // Scroll to the top of the page so user doesn't get confused
+            window.scrollTo(0,0);
+
+            changePage(gpNav3Var)
+        }
     }
     const gpNav4 = () => {
 
-        // Scroll to the top of the page so user doesn't get confused
-        window.scrollTo(0,0);
+        if(pgNum !== gpNav4Var){ // doesn't let it work if you are on that page already
 
-        changePage(gpNav4Var)
+            // Scroll to the top of the page so user doesn't get confused
+            window.scrollTo(0,0);
+            
+            changePage(gpNav4Var)
+        }
     }
     const gpNavRight = () => {
 
-        if(pgNum < pgData.length/24){
+        if(pgNum < pgData.length/24){ // doesn't let it work if you are on the last page
 
             // Scroll to the top of the page so user doesn't get confused
             window.scrollTo(0,0);
@@ -155,6 +170,13 @@ function SearchRes (props) {
             
         }
 
+        // Underlines the page number user is on
+        // const onThisPage = () =>{
+        //     return (
+                
+        //     )
+        // }
+
 
         return (
             <ul className="mx-auto text-center text mt-3">
@@ -163,18 +185,67 @@ function SearchRes (props) {
                 <li>
                     <span className="rounded-circle mx-2 pg-nav-active"  onClick={gpNavLeft}>&lt;</span>
                 </li>
+
+                {/* page link */}
                 <li>
-                    <span id="pg-nav-1" className="pg-nav-active" style={{borderRadius: "5px 0px 0px 5px"}} onClick={gpNav1}>{gpNav1Var}</span>
+                    <span 
+                        id="pg-nav-1" 
+                        className="pg-nav-active" 
+                        style={
+                            gpNav1Var == pgNum ? // adds underline if user is on this page
+                                {
+                                    borderRadius: "5px 0px 0px 5px", 
+                                    textDecoration: "underline solid #0280C8"
+                                } :
+                                { borderRadius: "5px 0px 0px 5px" }
+                        } 
+                        onClick={gpNav1}
+                    >{gpNav1Var}</span>
                 </li>
 
                 {/* Depending on how many search results we find the navigation at the bottom of the page the chain */}
                 {/* These shows this page in bottom nav if gpNav2Var, gpNav3Var, gpNav4Var is true */}
-                {gpNav2Var ? <li><span id="pg-nav-2" className="pg-nav-active" onClick={gpNav2}>{gpNav2Var}</span></li> : ""}
-
-                {gpNav3Var ? <li><span id="pg-nav-3" className="pg-nav-active" onClick={gpNav3}>{gpNav3Var}</span></li> : ""}
-
-                {gpNav3Var && gpNav4Var !== 4 ? <li><span>...</span></li> : ""}
-                {gpNav4Var && gpNav4Var !== gpNav2Var && gpNav4Var !== gpNav3Var ? <li><span id="pg-nav-4" className="pg-nav-active" style={{borderRadius: "0px 5px 5px 0px"}} onClick={gpNav4}>{gpNav4Var}</span></li> : ""}
+                {
+                    gpNav2Var ? 
+                        <li>
+                            <span 
+                                id="pg-nav-2" 
+                                className="pg-nav-active" 
+                                style={ gpNav2Var == pgNum ? { textDecoration: "underline solid #0280C8" } : {} } // adds underline if user is on this page
+                                onClick={gpNav2}
+                            >{gpNav2Var}</span>
+                        </li> : ""
+                }
+                {
+                    gpNav3Var ? 
+                        <li>
+                            <span 
+                                id="pg-nav-3" 
+                                className="pg-nav-active" 
+                                style={ gpNav3Var == pgNum ? { textDecoration: "underline solid #0280C8" } : {} } // adds underline if user is on this page
+                                onClick={gpNav3}
+                            >{gpNav3Var}</span>
+                        </li> : ""
+                }
+                { gpNav3Var && gpNav4Var !== 4 ? <li><span>...</span></li> : "" }
+                {
+                    gpNav4Var && gpNav4Var !== gpNav2Var && gpNav4Var !== gpNav3Var ? 
+                        <li>
+                            <span 
+                                id="pg-nav-4" 
+                                className="pg-nav-active" 
+                                style={
+                                    gpNav4Var == pgNum ? // adds underline if user is on this page
+                                        {
+                                            borderRadius: "0px 5px 5px 0px", 
+                                            textDecoration: "underline solid #0280C8"
+                                        } :
+                                        { borderRadius: "0px 5px 5px 0px" }
+                                } 
+                                onClick={gpNav4}
+                            >{gpNav4Var}</span>
+                        </li> : ""
+                }
 
                 {/* Right arrow to next page */}
                 <li>

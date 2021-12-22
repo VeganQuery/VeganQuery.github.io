@@ -63,10 +63,10 @@ function SearchRes (props) {
     }
 
     // Var's below keep track of the page number 
-    let gpNav1Var;
-    let gpNav2Var;
-    let gpNav3Var;
-    let gpNav4Var;
+    let pgNav1Var;
+    let pgNav2Var;
+    let pgNav3Var;
+    let pgNav4Var;
 
     // Moves to the page that the user requested
     const changePage = (pgNum) =>{
@@ -81,58 +81,55 @@ function SearchRes (props) {
 
     }
 
-    const gpNavLeft = () => {
+    const pgNavLeft = () => {
 
         if(pgNum > 1){ // doesn't let it work on 1st page
             changePage(pgNum - 1)
         }
     }
 
-    const gpNav1 = () => {
+    const pgNav1 = () => {
 
-        
-
-        console.log(typeof pgNum, typeof gpNav1Var)
-        if(pgNum !== gpNav1Var){ // doesn't let it work if you are on that page already
+        if(pgNum !== pgNav1Var){ // doesn't let it work if you are on that page already
 
             // Scroll to the top of the page so user doesn't get confused
             window.scrollTo(0,0);
             
-            changePage(gpNav1Var)
+            changePage(pgNav1Var)
         }
 
     }
-    const gpNav2 = () => {        
+    const pgNav2 = () => {        
 
-        if(pgNum !== gpNav2Var){ // doesn't let it work if you are on that page already
+        if(pgNum !== pgNav2Var){ // doesn't let it work if you are on that page already
 
             // Scroll to the top of the page so user doesn't get confused
             window.scrollTo(0,0);
 
-            changePage(gpNav2Var)
+            changePage(pgNav2Var)
         }
     }
-    const gpNav3 = () => {
+    const pgNav3 = () => {
 
-        if(pgNum !== gpNav3Var){ // doesn't let it work if you are on that page already
+        if(pgNum !== pgNav3Var){ // doesn't let it work if you are on that page already
 
             // Scroll to the top of the page so user doesn't get confused
             window.scrollTo(0,0);
 
-            changePage(gpNav3Var)
+            changePage(pgNav3Var)
         }
     }
-    const gpNav4 = () => {
+    const pgNav4 = () => {
 
-        if(pgNum !== gpNav4Var){ // doesn't let it work if you are on that page already
+        if(pgNum !== pgNav4Var){ // doesn't let it work if you are on that page already
 
             // Scroll to the top of the page so user doesn't get confused
             window.scrollTo(0,0);
-            
-            changePage(gpNav4Var)
+
+            changePage(pgNav4Var)
         }
     }
-    const gpNavRight = () => {
+    const pgNavRight = () => {
 
         if(pgNum < pgData.length/24){ // doesn't let it work if you are on the last page
 
@@ -146,36 +143,48 @@ function SearchRes (props) {
     // builds the search res nav at the bottom 
     const pgNav = () => {
 
-        if(pgData.length > 94){ //pgData.length > 119
+        // Determines how many pg nav numbers will show, depending on Current page & number of search res
+        if(pgNum > 3){
 
-            gpNav1Var = 1
-            gpNav2Var = 2
-            gpNav3Var = 3
-            gpNav4Var = Math.ceil(pgData.length/24)
-        
-        } else if(pgData.length > 24){ //pgData.length > 24
+            pgNav4Var = Math.ceil(pgData.length/24)
 
-            gpNav1Var = 1
-            gpNav2Var = 2
-            gpNav3Var = false
-            gpNav4Var = Math.ceil(pgData.length/24)
-        
-        } else { //all else
-
-            gpNav1Var = 1
-            gpNav2Var = false
-            gpNav3Var = false
-            gpNav4Var = false
-        
+            if(pgNum !== pgNav4Var){
+                pgNav1Var = pgNum - 2
+                pgNav2Var = pgNum - 1
+                pgNav3Var = pgNum
+            } else {
+                pgNav1Var = pgNum - 3
+                pgNav2Var = pgNum - 2
+                pgNav3Var = pgNum - 1
+            }
             
-        }
+            
+        } else {
+            
+            if(pgData.length > 95){ 
 
-        // Underlines the page number user is on
-        // const onThisPage = () =>{
-        //     return (
-                
-        //     )
-        // }
+                pgNav1Var = 1
+                pgNav2Var = 2
+                pgNav3Var = 3
+                pgNav4Var = Math.ceil(pgData.length/24)
+            
+            } else if(pgData.length > 24){ 
+    
+                pgNav1Var = 1
+                pgNav2Var = 2
+                pgNav3Var = false
+                pgNav4Var = Math.ceil(pgData.length/24)
+            
+            } else { 
+    
+                pgNav1Var = 1
+                pgNav2Var = false
+                pgNav3Var = false
+                pgNav4Var = false
+            
+            }
+        }
+       
 
 
         return (
@@ -183,7 +192,7 @@ function SearchRes (props) {
 
                 {/* Left arrow to previous page */}
                 <li>
-                    <span className="rounded-circle mx-2 pg-nav-active"  onClick={gpNavLeft}>&lt;</span>
+                    <span className="rounded-circle mx-2 pg-nav-active"  onClick={pgNavLeft}>&lt;</span>
                 </li>
 
                 {/* page link */}
@@ -192,64 +201,66 @@ function SearchRes (props) {
                         id="pg-nav-1" 
                         className="pg-nav-active" 
                         style={
-                            gpNav1Var == pgNum ? // adds underline if user is on this page
+                            pgNav1Var == pgNum ? // adds underline if user is on this page
                                 {
                                     borderRadius: "5px 0px 0px 5px", 
                                     textDecoration: "underline solid #0280C8"
-                                } :
-                                { borderRadius: "5px 0px 0px 5px" }
+                                } : { 
+                                    borderRadius: "5px 0px 0px 5px" 
+                                }
                         } 
-                        onClick={gpNav1}
-                    >{gpNav1Var}</span>
+                        onClick={pgNav1}
+                    >{pgNav1Var}</span>
                 </li>
 
                 {/* Depending on how many search results we find the navigation at the bottom of the page the chain */}
-                {/* These shows this page in bottom nav if gpNav2Var, gpNav3Var, gpNav4Var is true */}
+                {/* These shows this page in bottom nav if pgNav2Var, pgNav3Var, pgNav4Var is true */}
                 {
-                    gpNav2Var ? 
+                    pgNav2Var ? 
                         <li>
                             <span 
                                 id="pg-nav-2" 
                                 className="pg-nav-active" 
-                                style={ gpNav2Var == pgNum ? { textDecoration: "underline solid #0280C8" } : {} } // adds underline if user is on this page
-                                onClick={gpNav2}
-                            >{gpNav2Var}</span>
+                                style={ pgNav2Var == pgNum ? { textDecoration: "underline solid #0280C8" } : {} } // adds underline if user is on this page
+                                onClick={pgNav2}
+                            >{pgNav2Var}</span>
                         </li> : ""
                 }
                 {
-                    gpNav3Var ? 
+                    pgNav3Var ? 
                         <li>
                             <span 
                                 id="pg-nav-3" 
                                 className="pg-nav-active" 
-                                style={ gpNav3Var == pgNum ? { textDecoration: "underline solid #0280C8" } : {} } // adds underline if user is on this page
-                                onClick={gpNav3}
-                            >{gpNav3Var}</span>
+                                style={ pgNav3Var == pgNum ? { textDecoration: "underline solid #0280C8" } : {} } // adds underline if user is on this page
+                                onClick={pgNav3}
+                            >{pgNav3Var}</span>
                         </li> : ""
                 }
-                { gpNav3Var && gpNav4Var !== 4 ? <li><span>...</span></li> : "" }
+                { pgNav3Var && pgNav4Var !== 4 ? <li><span>...</span></li> : "" }
                 {
-                    gpNav4Var && gpNav4Var !== gpNav2Var && gpNav4Var !== gpNav3Var ? 
+                    pgNav4Var && pgNav4Var !== pgNav2Var && pgNav4Var !== pgNav3Var ? 
                         <li>
                             <span 
                                 id="pg-nav-4" 
                                 className="pg-nav-active" 
                                 style={
-                                    gpNav4Var == pgNum ? // adds underline if user is on this page
+                                    pgNav4Var == pgNum ? // adds underline if user is on this page
                                         {
                                             borderRadius: "0px 5px 5px 0px", 
                                             textDecoration: "underline solid #0280C8"
-                                        } :
-                                        { borderRadius: "0px 5px 5px 0px" }
+                                        } : { 
+                                            borderRadius: "0px 5px 5px 0px" 
+                                        }
                                 } 
-                                onClick={gpNav4}
-                            >{gpNav4Var}</span>
+                                onClick={pgNav4}
+                            >{pgNav4Var}</span>
                         </li> : ""
                 }
 
                 {/* Right arrow to next page */}
                 <li>
-                    <span className="rounded-circle mx-2 pg-nav-active" onClick={gpNavRight}>&gt;</span>
+                    <span className="rounded-circle mx-2 pg-nav-active" onClick={pgNavRight}>&gt;</span>
                 </li>
             </ul>
         )

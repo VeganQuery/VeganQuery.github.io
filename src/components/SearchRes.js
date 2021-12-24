@@ -197,8 +197,7 @@ function SearchRes (props) {
 
                 {/* page link */}
                 <li>
-                    <span 
-                        id="pg-nav-1" 
+                    <span  
                         className="pg-nav-active" 
                         style={
                             pgNav1Var == pgNum ? // adds underline if user is on this page
@@ -219,7 +218,6 @@ function SearchRes (props) {
                     pgNav2Var ? 
                         <li>
                             <span 
-                                id="pg-nav-2" 
                                 className="pg-nav-active" 
                                 style={ pgNav2Var == pgNum ? { textDecoration: "underline solid #0280C8" } : {} } // adds underline if user is on this page
                                 onClick={pgNav2}
@@ -230,7 +228,6 @@ function SearchRes (props) {
                     pgNav3Var ? 
                         <li>
                             <span 
-                                id="pg-nav-3" 
                                 className="pg-nav-active" 
                                 style={ pgNav3Var == pgNum ? { textDecoration: "underline solid #0280C8" } : {} } // adds underline if user is on this page
                                 onClick={pgNav3}
@@ -242,7 +239,6 @@ function SearchRes (props) {
                     pgNav4Var && pgNav4Var !== pgNav2Var && pgNav4Var !== pgNav3Var ? 
                         <li>
                             <span 
-                                id="pg-nav-4" 
                                 className="pg-nav-active" 
                                 style={
                                     pgNav4Var == pgNum ? // adds underline if user is on this page
@@ -315,12 +311,11 @@ function SearchRes (props) {
                                     type="search" 
                                     placeholder="Search" 
                                     aria-label="Search" 
-                                    id="searched"
+                                    id="main-search"
                                     value={searchTerm}
                                     onChange={handleInputChange}
                                 /> 
 
-                                {/* <hr className="col-1 m-0 d-none d-sm-block" id="vert"/> */}
                                 {/* Search button; it's a search icon, form bootstrap icons */}
                                 <span className="col-1" id="res-search-button" onClick={sendSearch}><i className="bi bi-search"></i></span>
 
@@ -347,7 +342,7 @@ function SearchRes (props) {
                         <div className="col-12 col-md-8 col-lg-6 m-0">
 
                             {/* Top Ad */}
-                            <div className="" style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "85px"}} id="top-ad">
+                            <div style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "85px"}} id="top-ad">
                                 Ad
                             </div>
 
@@ -357,7 +352,7 @@ function SearchRes (props) {
                             </div>
 
                             {/* Bottom Ad */}
-                            <div className="" style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "112px"}} id="botom-ad">
+                            <div style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "112px"}} id="botom-ad">
                                 Ad
                             </div>
 
@@ -368,7 +363,7 @@ function SearchRes (props) {
                         
                         {/* Side Ad */}
                         <div className="col-12 col-md-4 col-lg-6 d-none d-md-block m-0" id="side-ad">
-                            <div className="" style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "600px", width: "50%"}}>
+                            <div style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "600px", width: "50%"}}>
                                 Ad
                             </div>
                         </div>

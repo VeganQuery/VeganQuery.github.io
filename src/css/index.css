@@ -1,130 +1,75 @@
 body {
-  font-family: Roboto, sans-serif;
+  font-family: sans-serif;
 }
 
-#main-title{
-  font-family: 'Risque', cursive;
-}
-#seach-res-title{
-  font-family: 'Risque', cursive;
+/* -----Website Title on Search res pg----- */
+#seach-res-title{ /* (big + small screen) <h2> */
+  font-family: 'Risque';
   font-size: 24px;
 }
 
-#mobi-logo{
+#mobi-logo{ /* (small screen) <a> */
   margin-bottom: 12.5px;
 }
 
-#res-left-title-div{
+#res-left-title-div{ /* (big screen) <a> */
   left: 2%;
   z-index: 9999;
   width: 50px;
   top: 14px;
 }
-
-
+/* -----/Website Title on Search res pg----- */
 
 /* -----Search----- */
-
-#search-div{
+#search-div{ /* Home pg search <form> */
   border-radius: 25px;
   border: 1px solid #ced4da;
   margin: auto;
   padding-bottom: 0px;
 }
 
-#res-search-div{
+#res-search-div{ /* search res search input field <form> */
   border-radius: 25px;
   border: 1px solid #ced4da;
   margin: auto;
   padding-bottom: 0px;
 }
 
-#main-search{
+#main-search{ /* used for the search <input> */
   border-radius: 25px 0px 0px 25px;
   border: none;
-  padding-top: 4px;
-  padding-left: 15px;
-  padding-right: 0px;
-  margin-bottom: 0px;
-  margin-bottom: 4px;
-  margin-top: 4px;
-  width: 86%;
-  border-right: 1px solid #ced4da;
-}
-#searched{
-  border-radius: 25px 0px 0px 25px;
-  border: none;
-  padding-top: 4px;
-  padding-left: 15px;
-  padding-right: 0px;
-  margin-bottom: 0px;
-  margin-bottom: 4px;
-  margin-top: 4px;
+  padding: 4px 0px 1px 15px;
+  margin: 4px 0px 4px 0px;
   width: 86%;
   border-right: 1px solid #ced4da;
 }
 
-
-
-/* hr#vert {
-  transform:rotate(90deg);
-  -ms-transform:rotate(90deg);
-  -webkit-transform:rotate(90deg);
-  width: 10px;
-  position: relative;
-  top: 16px;
-} */
-
-
+#main-search:focus { /* Removes the blue highlight when input is selected */
+  outline-width: 0;
+}
 /* -----/Search----- */
 
-header {
-  padding: 20px 0;
-}
-
-header .row,
-footer .row {
+/* -----Home pg Title + Search field----- */
+.jumbotron { /* Title & search field <section> */
   display: flex;
   align-items: center;
-}
-
-
-.jumbotron {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background-size: cover;
-  background-color: white;
-  color: #ffffff;
   height: 400px;
 }
 
-.jumbotron h2 {
-  font-size: 60px;
+.jumbotron h2 { /* Title */
   font-weight: 700;
   text-align: center;
-  color: #fff;
+  font-family: 'Risque';
 }
 
 @media (max-width: 35em) {
-  .jumbotron h2 {
+  .jumbotron h2 { /* Title */
       font-size: 55px;
   }
 }
+/* -----/Home pg Title + Search field----- */
 
-.jumbotron h3 {
-  margin: 0 0 20px;
-  color: #fff;
-}
 /* /home */
-
-/* search res */
-/* #side-ad{
-  background-color: blue;
-  height: 100px;
-} */
-/* /search res */
-
 
 footer {
   font-size: 12px;
@@ -137,7 +82,6 @@ li {
   
 }
 li span {
-  /* font-family: 'Roboto', sans-serif; */
   margin: 10px 0px 10px 0px;
   font-size: 21px;
   color: #0280C8;
@@ -155,11 +99,6 @@ li span {
 /* -----------------  Page Cards   ------------------ */
 
 @media (min-width: 1em) {
-  /* .card-columns {
-      -webkit-column-count: 2;
-      -moz-column-count: 2;
-      column-count: 2;
-  } */
   /*  title */
   #main-title{
     font-family: 'Risque', cursive;
@@ -206,15 +145,11 @@ li span {
   #main-search{
     width: 90%;
   }
-  #searched{
-    width: 90%;
-  }
   
 }
 @media (min-width: 30em) {
   #search-button{
     padding-top: 2.5px;
-    /* padding-left: 7px; */
   }
   #res-search-button{
     padding-top: 2.5px;
@@ -223,17 +158,9 @@ li span {
   #main-search{
     width: 91%;
   }
-  #searched{
-    width: 91%;
-  }
   
 }
 @media (min-width: 36em) {
-  /* .card-columns {
-      -webkit-column-count: 3;
-      -moz-column-count: 3;
-      column-count: 3;
-  } */
   #search-button{
     padding-top: 2.5px;
     padding-left: 9px;

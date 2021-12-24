@@ -37,6 +37,8 @@ This app has scraped data form the web with Go (Golang) to provide a data set of
 <!-- ***Note: make sure to change the files to reflect your GitHub info:*** [Learn How](https://blog.usejournal.com/how-to-deploy-your-react-app-into-github-pages-b2c96292b18e) -->
 
 ```
+git clone https://github.com/LWRGitHub/vegan.git
+cd vegan
 yarn install
 ```
 

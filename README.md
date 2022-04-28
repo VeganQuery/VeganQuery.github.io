@@ -16,7 +16,9 @@ This app has scraped data form the web with Go (Golang) to provide a data set of
         - React HashRouter
     - DOM
     - Local Storage
-- Go (Golang)
+- Python
+    - BeautifulSoup 4
+- Go (Golang) ***Older vertion used Go for Scraping "Now Using Python"***
     - Go Testing
     - Go Benchmarking
     - Go Web Scraping
@@ -42,11 +44,19 @@ cd vegan
 yarn install
 ```
 
-**(Not Necessary) Run the Go Web Scraper:**
+**(Not Necessary) Run the Go Web Scraper:** 
+***Older vertion used Go for Scraping "Now Using Python"***
 
 ```
 cd go
 go run scrape.go
+```
+
+**(Not Necessary) Run the Python Web Scraper:** 
+
+```
+cd py_scrp
+python3 scrp_recipe4vegans.py
 ```
 
 ### Run

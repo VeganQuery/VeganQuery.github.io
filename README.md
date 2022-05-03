@@ -18,6 +18,8 @@ This app has scraped data form the web with Go (Golang) to provide a data set of
     - Local Storage
 - Python
     - BeautifulSoup 4
+    - Selenium 
+        - Chrome Webdriver
 - Go (Golang) ***Older vertion used Go for Scraping "Now Using Python"***
     - Go Testing
     - Go Benchmarking
@@ -56,8 +58,9 @@ go run scrape.go
 
 ```
 cd py_scrp
-python3 scrp_recipe4vegans.py
+python3 NAME_OF_FILE.py 
 ```
+***Note you will need to have chromedriver for scrapers using selenium, see video for more details on how to:*** [video](https://www.youtube.com/watch?v=Xjv1sY630Uc)
 
 ### Run
 ***@ localhost:3000***

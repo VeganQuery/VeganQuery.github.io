@@ -1,8 +1,9 @@
 from bs4 import BeautifulSoup as bs
 import requests
 import time
+import json
 
-recp_datas = []
+recp_datas = set()
 web_adress = 'https://recipeforvegans.com/recipe/category' 
 
 r1 = requests.get(web_adress)
@@ -32,12 +33,13 @@ def get_recp_data(web_adress):
         # loop through articles
         for(i, article) in enumerate(articles):
 
-            # add recipes to list
-            recp_datas.append({
+            data = {
                 'title': article.h2.a.text,
                 'img': article.img['src'],
                 'href': article.h2.a['href'],
-            })
+            }
+            # add recipes to list
+            recp_datas.add(json.dumps(data))
 
         # get next page
         time.sleep(2)
@@ -53,4 +55,10 @@ def get_recp_data(web_adress):
 for l in catLS:
     get_recp_data(l)
 
-print(recp_datas)
+datas = []
+
+# size = len(recp_datas)
+for e in recp_datas:
+    datas.append(json.loads(e))
+
+print(datas)

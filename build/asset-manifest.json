@@ -1,22 +1,15 @@
 {
-  "files": {
-    "main.css": "/vegan-recipes-search-engine/static/css/main.bdafa5ee.chunk.css",
-    "main.js": "/vegan-recipes-search-engine/static/js/main.65f31eeb.chunk.js",
-    "main.js.map": "/vegan-recipes-search-engine/static/js/main.65f31eeb.chunk.js.map",
-    "runtime-main.js": "/vegan-recipes-search-engine/static/js/runtime-main.20d69261.js",
-    "runtime-main.js.map": "/vegan-recipes-search-engine/static/js/runtime-main.20d69261.js.map",
-    "static/js/2.1e022a8a.chunk.js": "/vegan-recipes-search-engine/static/js/2.1e022a8a.chunk.js",
-    "static/js/2.1e022a8a.chunk.js.map": "/vegan-recipes-search-engine/static/js/2.1e022a8a.chunk.js.map",
-    "static/js/3.fcbbd17a.chunk.js": "/vegan-recipes-search-engine/static/js/3.fcbbd17a.chunk.js",
-    "static/js/3.fcbbd17a.chunk.js.map": "/vegan-recipes-search-engine/static/js/3.fcbbd17a.chunk.js.map",
-    "index.html": "/vegan-recipes-search-engine/index.html",
-    "static/css/main.bdafa5ee.chunk.css.map": "/vegan-recipes-search-engine/static/css/main.bdafa5ee.chunk.css.map",
-    "static/js/2.1e022a8a.chunk.js.LICENSE.txt": "/vegan-recipes-search-engine/static/js/2.1e022a8a.chunk.js.LICENSE.txt"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.20d69261.js",
-    "static/js/2.1e022a8a.chunk.js",
-    "static/css/main.bdafa5ee.chunk.css",
-    "static/js/main.65f31eeb.chunk.js"
-  ]
+  "main.css": "/vegan/static/css/main.9b7f01ea.chunk.css",
+  "main.js": "/vegan/static/js/main.a55dc9eb.chunk.js",
+  "main.js.map": "/vegan/static/js/main.a55dc9eb.chunk.js.map",
+  "static/js/1.3fe7121e.chunk.js": "/vegan/static/js/1.3fe7121e.chunk.js",
+  "static/js/1.3fe7121e.chunk.js.map": "/vegan/static/js/1.3fe7121e.chunk.js.map",
+  "static/js/2.8b260bb4.chunk.js": "/vegan/static/js/2.8b260bb4.chunk.js",
+  "static/js/2.8b260bb4.chunk.js.map": "/vegan/static/js/2.8b260bb4.chunk.js.map",
+  "runtime~main.js": "/vegan/static/js/runtime~main.b57a6d85.js",
+  "runtime~main.js.map": "/vegan/static/js/runtime~main.b57a6d85.js.map",
+  "static/css/main.9b7f01ea.chunk.css.map": "/vegan/static/css/main.9b7f01ea.chunk.css.map",
+  "index.html": "/vegan/index.html",
+  "precache-manifest.a92906954e5fb327e004f64ec6c9c36f.js": "/vegan/precache-manifest.a92906954e5fb327e004f64ec6c9c36f.js",
+  "service-worker.js": "/vegan/service-worker.js"
 }

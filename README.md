@@ -2,8 +2,7 @@
 
 This app has scraped data form the web with Go (Golang) to provide a data set of vegan recipes. This web app is made with React.js & provides a vegan recipe search engin. The site is build with the MERN stack pluss Go (Golang). I built the wire frames using [Figma.com](https://www.figma.com/file/zqA6nNoXnQQhxqIRP4SwAn/Vegan?node-id=3%3A3), I hope you like my web app!
 
-***GitHub Pages not active for this version***
-<!-- [Visit Site](https://lwrgithub.github.io/vegan-recipes-search-engine/) -->
+[Visit Site](https://lwrgithub.github.io/vegan/)
 
 
 ## Tech Used
@@ -32,13 +31,13 @@ This app has scraped data form the web with Go (Golang) to provide a data set of
 - Google Fonts
     - Google Font, "Risque"
 - ***GitHub Pages not active for this version***
-<!-- - [GitHub Pages](https://lwrgithub.github.io/vegan-recipes-search-engine/) -->
+- [GitHub Pages](https://lwrgithub.github.io/vegan/)
 
 
 ## Setup, Install & Run
 
 ### Install
-<!-- ***Note: make sure to change the files to reflect your GitHub info:*** [Learn How](https://blog.usejournal.com/how-to-deploy-your-react-app-into-github-pages-b2c96292b18e) -->
+***Note: make sure to change the files to reflect your GitHub info:*** [Learn How](https://blog.usejournal.com/how-to-deploy-your-react-app-into-github-pages-b2c96292b18e)
 
 ```
 git clone https://github.com/LWRGitHub/vegan.git
@@ -71,11 +70,10 @@ yarn start
 ```
 
 ### Build/Push
-<!-- ***When using GitHub Pages do a build before pushing*** -->
+***When using GitHub Pages do a build before pushing***
 
-<!-- ```
-npm run deploy -->
 ```
+npm run deploy
 git add -A
 git commit -m "Some New Code"
 git push

@@ -290,7 +290,8 @@ function SearchRes (props) {
 
             <section className="position-relative" id="adj-4-logo">
                 {/* Title & Search */}
-                <section className={window.innerWidth >= 768 ? "container text-center fixed-top bg-white" : "container text-center"} id="title-sec">
+                {/* <section className={window.innerWidth >= 768 ? "container text-center fixed-top bg-white" : "container text-center"} id="title-sec"> */}
+                <section className={"container text-center fixed-top bg-white"} id="title-sec">
                     <div className="row">
                         <div className="col-12 col-md-8 col-lg-6 m-0 pt-2">
 

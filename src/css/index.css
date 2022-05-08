@@ -63,7 +63,7 @@ body {
 }
 
 @media (max-width: 35em) {
-  .jumbotron h2 { /* Title */
+  .jumbotron h2 { 
       font-size: 55px;
   }
 }
@@ -98,8 +98,17 @@ li span {
 
 /* -----------------  Page Cards   ------------------ */
 
+/* shows top Ad on Mobile/small web browser */
+@media (max-width: 48em) {
+  #top-ad{
+    margin-top: 110px;
+  }
+}
+
 @media (min-width: 1em) {
-  /*  title */
+  #title-sec{
+    padding-bottom: 10px;
+  }
   #main-title{
     font-family: 'Risque', cursive;
     font-size: 6em;
@@ -172,7 +181,7 @@ li span {
   
 } 
 @media (min-width: 48em) {
-  /*  title */
+
   #main-title{
     font-family: 'Risque', cursive;
     font-size: 8em;
@@ -224,6 +233,13 @@ li span {
   padding: 0;
 }
 /* -----------------  /Page Cards   ------------------ */
+
+/* Get Top Ad to show on moble */
+/* @media (max-width: 42em) {
+  #top-ad{ 
+    padding-top: 100px;
+  }
+} */
 
 .card{
   border-radius: 12.5px 12.5px 12.5px 12.5px;

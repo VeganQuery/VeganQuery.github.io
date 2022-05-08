@@ -70,15 +70,18 @@
     })
 
     // widow size changes Title & Search input aria on search res page
-    window.addEventListener('resize', function() {
-      let titleSearch = document.getElementById("title-sec")
-      let isOnPage = (searched != null ? true : false)
-      if(isOnPage && window.innerWidth >= 768){
-        titleSearch.setAttribute('class', "container text-center pb-2 fixed-top bg-white");
-      }else if(isOnPage && window.innerWidth <= 767){
-        titleSearch.setAttribute('class', "container text-center pb-2");
-      }
-    });
+    // window.addEventListener('resize', function() {
+    //   let titleSearch = document.getElementById("title-sec")
+    //   let topAd = document.getElementById("top-ad")
+    //   let isOnPage = (searched != null ? true : false)
+    //   if(isOnPage && window.innerWidth >= 768){
+    //     titleSearch.setAttribute('class', "container text-center pb-2 fixed-top bg-white");
+    //     // topAd.setAttribute('syle', "padding-top: 0px;")
+    //   }else if(isOnPage && window.innerWidth <= 767){
+    //     titleSearch.setAttribute('class', "container text-center pb-2");
+    //     // topAd.setAttribute('syle', "padding-top: 150px;")
+    //   }
+    // });
 
   </script>
 </html>

@@ -61,6 +61,7 @@ cd py_scrp
 python3 NAME_OF_FILE.py 
 ```
 ***Note you will need to have chromedriver for scrapers using selenium, see video for more details on how to:*** [video](https://www.youtube.com/watch?v=Xjv1sY630Uc)
+***[Selenium Webdriver](https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/)
 
 ### Run
 ***@ localhost:3000***

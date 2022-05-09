@@ -342,9 +342,19 @@ function SearchRes (props) {
                         <div className="col-12 col-md-8 col-lg-6 m-0">
 
                             {/* Top Ad */}
-                            <div style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "85px"}} id="top-ad">
+                            {/* <div style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "85px"}} id="top-ad">
                                 Ad
-                            </div>
+                            </div> */}
+
+                            {/* Top Ad */}
+                            <amp-ad width="100vw" height="320"
+                                type="adsense"
+                                data-ad-client="ca-pub-3187955226926821"
+                                data-ad-slot="2231118881"
+                                data-auto-format="rspv"
+                                data-full-width="">
+                                <div overflow=""></div>
+                            </amp-ad>
 
                             {/* Search res */}
                             <div className="row row-cols-2 row-cols-md-3 g-4">
@@ -352,9 +362,19 @@ function SearchRes (props) {
                             </div>
 
                             {/* Bottom Ad */}
-                            <div style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "112px"}} id="botom-ad">
+                            {/* <div style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "112px"}} id="botom-ad">
                                 Ad
-                            </div>
+                            </div> */}
+
+                            {/* Bottom Ad */}
+                            <amp-ad width="100vw" height="320"
+                                type="adsense"
+                                data-ad-client="ca-pub-3187955226926821"
+                                data-ad-slot="3544200553"
+                                data-auto-format="rspv"
+                                data-full-width="">
+                                <div overflow=""></div>
+                            </amp-ad>
 
                             {/* Bottom Nav, change page to view other searched items */}
                             {pgNav()}
@@ -363,9 +383,18 @@ function SearchRes (props) {
                         
                         {/* Side Ad */}
                         <div className="col-12 col-md-4 col-lg-6 d-none d-md-block m-0" id="side-ad">
-                            <div style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "600px", width: "50%"}}>
+                            {/* <div style={{border: "1px solid #ced4da", borderRadius: "12.5px 12.5px 12.5px 12.5px", height: "600px", width: "50%"}}>
                                 Ad
-                            </div>
+                            </div> */}
+
+                            <amp-ad width="100vw" height="320"
+                                type="adsense"
+                                data-ad-client="ca-pub-3187955226926821"
+                                data-ad-slot="6170363893"
+                                data-auto-format="rspv"
+                                data-full-width="">
+                                <div overflow=""></div>
+                            </amp-ad>
                         </div>
 
                     </div>

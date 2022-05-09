@@ -1,15 +1,15 @@
 {
-  "main.css": "/vegan/static/css/main.9b7f01ea.chunk.css",
-  "main.js": "/vegan/static/js/main.a55dc9eb.chunk.js",
-  "main.js.map": "/vegan/static/js/main.a55dc9eb.chunk.js.map",
-  "static/js/1.3fe7121e.chunk.js": "/vegan/static/js/1.3fe7121e.chunk.js",
-  "static/js/1.3fe7121e.chunk.js.map": "/vegan/static/js/1.3fe7121e.chunk.js.map",
-  "static/js/2.8b260bb4.chunk.js": "/vegan/static/js/2.8b260bb4.chunk.js",
-  "static/js/2.8b260bb4.chunk.js.map": "/vegan/static/js/2.8b260bb4.chunk.js.map",
-  "runtime~main.js": "/vegan/static/js/runtime~main.b57a6d85.js",
-  "runtime~main.js.map": "/vegan/static/js/runtime~main.b57a6d85.js.map",
-  "static/css/main.9b7f01ea.chunk.css.map": "/vegan/static/css/main.9b7f01ea.chunk.css.map",
-  "index.html": "/vegan/index.html",
-  "precache-manifest.a92906954e5fb327e004f64ec6c9c36f.js": "/vegan/precache-manifest.a92906954e5fb327e004f64ec6c9c36f.js",
-  "service-worker.js": "/vegan/service-worker.js"
+  "main.css": "/static/css/main.9b7f01ea.chunk.css",
+  "main.js": "/static/js/main.a55dc9eb.chunk.js",
+  "main.js.map": "/static/js/main.a55dc9eb.chunk.js.map",
+  "static/js/1.3fe7121e.chunk.js": "/static/js/1.3fe7121e.chunk.js",
+  "static/js/1.3fe7121e.chunk.js.map": "/static/js/1.3fe7121e.chunk.js.map",
+  "static/js/2.8b260bb4.chunk.js": "/static/js/2.8b260bb4.chunk.js",
+  "static/js/2.8b260bb4.chunk.js.map": "/static/js/2.8b260bb4.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.216301cb.js",
+  "runtime~main.js.map": "/static/js/runtime~main.216301cb.js.map",
+  "static/css/main.9b7f01ea.chunk.css.map": "/static/css/main.9b7f01ea.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.c54e6ba44bbfd4e8f484a248ac300fc2.js": "/precache-manifest.c54e6ba44bbfd4e8f484a248ac300fc2.js",
+  "service-worker.js": "/service-worker.js"
 }

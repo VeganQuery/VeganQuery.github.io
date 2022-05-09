@@ -5,8 +5,8 @@ const Footer = () => (
         <span 
             className="text-success text-bold h2" 
             id="seach-res-title" 
-        >Vegan</span>
-        <span className="h5" style={{color: "#5E5E5E"}}> &copy; 2021</span>
+        >Vegan Query</span>
+        <span className="h5" style={{color: "#5E5E5E"}}> &copy; 2022</span>
     </footer>
 );
 

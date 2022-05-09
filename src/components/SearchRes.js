@@ -281,11 +281,11 @@ function SearchRes (props) {
         <div>
 
             {/* Website Name in a heading tag displays in biger screen*/}
-            <a href="/" className="text-decoration-none d-none d-md-block pt-1 fixed-top" id="res-left-title-div">
+            <a href="/" className="text-decoration-none d-none d-md-block pt-0 fixed-top" id="res-left-title-div">
                 <h2 
                     className="text-success" 
-                    id="seach-res-title" 
-                >Vegan</h2>
+                    id="seach-res-title1" 
+                >Vegan Query</h2>
             </a>
 
             <section className="position-relative" id="adj-4-logo">
@@ -298,8 +298,8 @@ function SearchRes (props) {
                             <a href="/" className="text-decoration-none row d-block d-md-none mt-1" id="mobi-logo">
                                 <h2 
                                     className="text-success" 
-                                    id="seach-res-title" 
-                                >Vegan</h2>
+                                    id="seach-res-title2" 
+                                >Vegan Query</h2>
                             </a>
 
                             {/* Search bar */}

@@ -3,7 +3,11 @@ body {
 }
 
 /* -----Website Title on Search res pg----- */
-#seach-res-title{ /* (big + small screen) <h2> */
+#seach-res-title1{ 
+  font-family: 'Risque';
+  font-size: 20px;
+}
+#seach-res-title2{ 
   font-family: 'Risque';
   font-size: 24px;
 }
@@ -120,7 +124,7 @@ li span {
     border-radius: 0px 25px 25px 0px;
     font-size: 20px;
     border: none;
-    color: gray;
+    color: #0280C8;
     cursor: pointer;
     padding-top: 3px;
     padding-left: 6px;

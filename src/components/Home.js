@@ -67,7 +67,7 @@ function Home (props) {
                     <h2 
                         className="text-success" 
                         id="main-title" 
-                    >Vegan</h2>
+                    >Vegan Query</h2>
                     
                     {/* Search bar */}
                     <form className="row" onSubmit={sendSearch} id="search-div">

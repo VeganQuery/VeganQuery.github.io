@@ -346,15 +346,9 @@ function SearchRes (props) {
                                 Ad
                             </div> */}
 
+                            <script type="text/javascript" src="https://www.effectivedisplayformats.com/e95eef7f1dac5f13b859246661b05c78/invoke.js"></script>
+
                             {/* Top Ad */}
-                            <amp-ad width="100vw" height="320"
-                                type="adsense"
-                                data-ad-client="ca-pub-3187955226926821"
-                                data-ad-slot="2231118881"
-                                data-auto-format="rspv"
-                                data-full-width="">
-                                <div overflow=""></div>
-                            </amp-ad>
 
                             {/* Search res */}
                             <div className="row row-cols-2 row-cols-md-3 g-4">
@@ -367,14 +361,6 @@ function SearchRes (props) {
                             </div> */}
 
                             {/* Bottom Ad */}
-                            <amp-ad width="100vw" height="320"
-                                type="adsense"
-                                data-ad-client="ca-pub-3187955226926821"
-                                data-ad-slot="3544200553"
-                                data-auto-format="rspv"
-                                data-full-width="">
-                                <div overflow=""></div>
-                            </amp-ad>
 
                             {/* Bottom Nav, change page to view other searched items */}
                             {pgNav()}
@@ -387,14 +373,6 @@ function SearchRes (props) {
                                 Ad
                             </div> */}
 
-                            <amp-ad width="100vw" height="320"
-                                type="adsense"
-                                data-ad-client="ca-pub-3187955226926821"
-                                data-ad-slot="6170363893"
-                                data-auto-format="rspv"
-                                data-full-width="">
-                                <div overflow=""></div>
-                            </amp-ad>
                         </div>
 
                     </div>

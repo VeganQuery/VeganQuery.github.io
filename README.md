@@ -3,7 +3,7 @@
 
 This app has scraped data form the web with Go (Golang) to provide a data set of vegan recipes. This web app is made with React.js & provides a vegan recipe search engin. The site is build with the MERN stack pluss Go (Golang). I built the wire frames using [Figma.com](https://www.figma.com/file/zqA6nNoXnQQhxqIRP4SwAn/Vegan?node-id=3%3A3), I hope you like my web app!
 
-[VeganQuery.com](http://veganquery.github.io)
+<!-- [VeganQuery.com](http://veganquery.github.io) -->
 
 
 ## Tech Used
